@@ -14,8 +14,8 @@ fn main() {
     // containing the text to disemvowel, and the second should
     // be the file we want to write the disemvoweled text to.
     let args: Vec<String> = env::args().collect();
-    let in_file = &args.get(0).expect("Not enough arguments");
-    let out_file = &args.get(1).expect("Not enough arguments");
+    let in_file = &args.get(1).expect("Not enough arguments");
+    let out_file = &args.get(2).expect("Not enough arguments");
 
     //TODO: Panic if not enough arguments are provided
     //Panic should output the string "Not enough arguments"
