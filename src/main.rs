@@ -17,17 +17,6 @@ fn main() {
     let in_file = &args.get(1).expect("Not enough arguments");
     let out_file = &args.get(2).expect("Not enough arguments");
 
-    //TODO: Panic if not enough arguments are provided
-    //Panic should output the string "Not enough arguments"
-
-
-
-    //TODO:
-    //  * Pass an argument to read_file to read the original text
-    //  * Pass that to disemvowel to remove the vowels
-    //  * Write the disemvoweled text using write_file
-
-    // Replace String::from("dummy text") with what you get from read_file
     let s = String::from(read_file(Path::new(in_file)));
 
     let s_disemvowel = disemvowel(&s);
@@ -48,9 +37,7 @@ fn is_vowel(c: &char) -> bool {
     c == &'a' || c == &'e' || c == &'i' || c == &'o' || c == &'u' || c == &'A' || c == &'E' || c == &'I' || c == &'O' || c == &'U'
 }
 
-//TODO: Return the input string without vowels.
 fn disemvowel(s: &str) -> String {
-    // String::from(s)
     let mut output = String::new();
     for c in s.chars() {
         if !is_vowel(&c){
